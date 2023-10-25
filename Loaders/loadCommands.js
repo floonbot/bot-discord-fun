@@ -1,7 +1,6 @@
 const { readdir, lstat } = require("fs").promises;
 const { join } = require("path");
 const { blue, green, yellow, bgGreenBright, bgRedBright, red } = require("colorette");
-const { error } = require("console");
 
 module.exports = async (bot) => {
   const allCommands = [];
