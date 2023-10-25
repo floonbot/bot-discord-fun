@@ -10,6 +10,9 @@ Avec se code tu pourras utilisée des slash commande qui sont principalement fun
 - dotenv: ^16.3.1
 - colorette: ^2.0.20
 - pretty-error: ^4.0.0
+- moment": "^2.29.4"
+- ms": "^2.1.3"
+- moment-duration-format": "^2.3.2"
 
 ## Installation
 
@@ -40,7 +43,7 @@ Dans le tchat discord pu se trouve votre bot taper par exemple /avatar qui affic
 
 ## Commandes
 
-/8ball, /art-texte, /avatar-random, /calculatrice, /dé, /emojify, /nombre-aléatoire, /pierre-feuille-ciseaux, /traducction
+/8ball, /art-texte, /avatar-random, /calculatrice, /dé, /emojify, /nombre-aléatoire, /pierre-feuille-ciseaux, /traducction, /statistique
 
 ## Contact
 
