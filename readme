@@ -1,0 +1,51 @@
+# bot-discord-fun
+
+Avec se code tu pourras utilisée des slash commande qui sont principalement fun
+
+## Dépendances
+
+- Discord.js: ^14.13.0
+- @iamtraction/google-translate: ^2.0.1
+- figlet: ^1.7.0
+- dotenv: ^16.3.1
+- colorette: ^2.0.20
+- pretty-error: ^4.0.0
+
+## Installation
+
+1. Clonez ce dépôt :
+
+    gh repo clone floonbot/bot-discord-fun
+
+2. Installez les dépendances :
+
+    exemple npm i discord.js@v14.13.0
+    attention a bien mettre las bonne version
+
+
+3. Créez un fichier `.env` à la racine de votre projet et ajoutez vos variables d'environnement (par exemple, votre jeton Discord) :
+
+    exemple TOKEN = le token du bot
+
+
+4. Démarrez le bot :
+ 
+
+    node main.js
+
+
+## Utilisation
+
+Dans le tchat discord pu se trouve votre bot taper par exemple /avatar qui affichera l'avatar d'un membre du clan ou le votre 
+
+## Commandes
+
+/8ball, /art-texte, /avatar-random, /calculatrice, /dé, /emojify, /nombre-aléatoire, /pierre-feuille-ciseaux, /traducction
+
+## Contact
+
+Mon discord floon__
+
+## Statut du Projet
+
+actif
