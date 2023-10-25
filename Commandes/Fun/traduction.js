@@ -36,13 +36,17 @@ module.exports = {
         if (!languesDisponibles.includes(langue)) {
 
             const erreur = new Discord.EmbedBuilder()
-                .setTitle(`👅 ***__LANGUES DISPONIBLES__*** 👅`)
+                .setTitle(`-👅  Le bot ne prend pas en charge se language`)
+                .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
                 .setColor("#000000")
-                .setDescription("Les choix de langues disponibles sont : \n\n \`fr\`\n \`en\`\n \`ja\`")
-                .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 64 }))
-                .setTimestamp()
-                .setFooter({ text: "traduction" })
-            interaction.reply({ embeds: [erreur] })
+                .setDescription(`
+                \`\`\`asciidoc
+• Langue disponibles :: ${languesDisponibles}
+\`\`\`
+                            `)
+                .setFooter({ text: `Traduction lancé par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+                .setTimestamp();
+           return interaction.reply({ embeds: [erreur] })
         }
 
         const traduit = await translate(texte, { to: langue });

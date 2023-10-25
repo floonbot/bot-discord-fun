@@ -3,6 +3,7 @@ const moment = require("moment");
 require("moment-duration-format");
 const ms = require("ms");
 const os = require("node:os");
+const { formatBytes } = require("../../Fonctions/formatBytes")
 
 module.exports = {
 
@@ -16,8 +17,8 @@ module.exports = {
         const durée = moment.duration(bot.uptime).format("**D [D], H [H], m [M], s [S]**");
 
         const embed = new discord.EmbedBuilder()
-            .setTitle(` 💻 Statistiques du Système`)
-            .setThumbnail(bot.user.displayAvatarURL())
+            .setTitle(`-💻  Statistiques du Système`)
+            .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
             .setColor("#00A705")
             .setDescription(`
 \`\`\`asciidoc
@@ -30,14 +31,11 @@ module.exports = {
 • Version de Discord.js     :: v${discord.version}
 \`\`\`
             `)
-            .setFooter({ text: `${interaction.user.tag}`, iconURL: `${interaction.user.avatarURL()}` });
+            .setFooter({ text: `Commande utilisée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+            .setTimestamp();
+
         interaction.reply({ embeds: [embed] });
     }
 };
 
-function formatBytes(octets) {
-    if (octets === 0) return "0 Octets";
-    const tailles = ["Octets", "Ko", "Mo", "Go", "To", "Po", "Eo", "Zo", "Yo"];
-    const i = Math.floor(Math.log(octets) / Math.log(1024));
-    return `${parseFloat((octets / Math.pow(1024, i)).toFixed(2))} ${tailles[i]}`;
-}
+

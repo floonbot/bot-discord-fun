@@ -25,7 +25,7 @@ module.exports = {
 		const result = réponse[Math.floor(Math.random() * réponse.length)];
 
 		const Embedball = new Discord.EmbedBuilder()
-			.setTitle("-✅  Le bot a répondu à ta question ! ")
+			.setTitle("-✅  Le bot a répondu à ta question")
 			.setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png"}))
 			.setColor("#00A705")
 			.setDescription(`

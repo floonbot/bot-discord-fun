@@ -12,7 +12,7 @@ module.exports = async (bot, interaction) => {
         if (interaction.commandName === "traduction") {
             let choices;
             const focusedOption = interaction.options.getFocused(true);
-            if (focusedOption.name === 'language') {
+            if (focusedOption.name === 'langue') {
                 choices = ['fr', 'en', 'ja']
             }
             let sortie = choices.filter(c => c.includes(entry))
