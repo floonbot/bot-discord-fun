@@ -11,19 +11,21 @@ module.exports = {
 	async run(bot, interaction, args) {
 
 		const user = bot.users.cache.random();
+		const avatarUser = user.displayAvatarURL({ dynamic: true, size: 512, format: "png" })
 
-		const row = new Discord.RowBuilder()
+		const row = new Discord.ActionRowBuilder()
 			.addComponents(
 				new Discord.ButtonBuilder()
 					.setLabel(`Avatar`)
-					.setURL(`${user.displayAvatarURL({ dynamic: true })}`)
+					.setURL(avatarUser)
 					.setStyle(Discord.ButtonStyle.Link)
 			);
 
 		const EmbedAvatar = new Discord.EmbedBuilder()
 			.setColor("#00A705")
-			.setDescription(`> 🎭 **__L'avatar du membre ${user.tag}__**`)
-			.setImage(user.displayAvatarURL({ dynamic: true }))
+			.setImage(avatarUser)
+			.setFooter({ text: `Commande utilisée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+			.setTimestamp();
 
 		interaction.reply({ embeds: [EmbedAvatar], components: [row] });
 	}

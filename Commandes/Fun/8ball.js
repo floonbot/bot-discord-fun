@@ -25,15 +25,17 @@ module.exports = {
 		const result = réponse[Math.floor(Math.random() * réponse.length)];
 
 		const Embedball = new Discord.EmbedBuilder()
-			.setTitle("***LA RÉPONSE À LA QUESTION***")
+			.setTitle("-✅  Le bot a répondu à ta question ! ")
+			.setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png"}))
 			.setColor("#00A705")
-			.addFields(
-				{ name: `❓ Question`, value: `> ${quest}`, inline: false },
-				{ name: `✅❌ Réponse`, value: `> ${result}`, inline: false },
-			)
-			.setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 64 }))
-			.setTimestamp()
-			.setFooter({ text: `${interaction.user.tag}`, iconURL: `${interaction.user.avatarURL()}` });
+			.setDescription(`
+\`\`\`asciidoc
+• Question   :: ${quest}
+• Réponse    :: ${result}
+\`\`\`
+            `)
+			.setFooter({ text: `Question posée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+			.setTimestamp();
 
 		interaction.reply({ embeds: [Embedball] });
 	}

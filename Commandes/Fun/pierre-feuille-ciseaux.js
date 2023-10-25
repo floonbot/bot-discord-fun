@@ -25,17 +25,19 @@ module.exports = {
         const result = determineResult(userChoice, botChoice);
 
         const EmbedPFC = new Discord.EmbedBuilder()
+            .setTitle(`-🪨 Le bot est entrain de chosir son coup à jouer`)
             .setColor("#00A705")
-            .setTimestamp()
-            .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 64, }))
-            .setFooter({ text: `${interaction.user.tag}`, iconURL: `${interaction.user.avatarURL()}` });
-
-        EmbedPFC.setDescription(`🏆 **LES RÉSULTATS SONT :**
- 
-        > **Joueur ${interaction.user.tag} : ** a choisi \`${userChoice}\`
-        > **Bot ${bot.user.tag} : ** a choisi \`${botChoice}\`
-        > **RÉSULTAT : ** ${result}`);
-        interaction.reply({ embeds: [EmbedPFC] });
-    }
+            .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
+        EmbedPFC .setDescription(`
+\`\`\`asciidoc
+• Joueurs :: ${userChoice}
+• Bot     :: ${botChoice}
+• Résutla :: ${result}
+\`\`\`
+                                    `)
+        .setFooter({ text: `pfc lancé par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+        .setTimestamp();
+    interaction.reply({ embeds: [EmbedPFC] });
+}
 }
 

@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const {  calculate } = require("../../Fonctions/math")
+const { calculate } = require("../../Fonctions/math")
 
 module.exports = {
     name: "calculatrice",
@@ -32,6 +32,7 @@ module.exports = {
     ],
 
     async run(bot, interaction, args) {
+
         const nombre = args.getNumber("number");
         const symbole = args.getString("symbol");
         const nombre1 = args.getNumber("number1");
@@ -42,13 +43,18 @@ module.exports = {
         } else if (result === "Division par zéro") {
             interaction.reply("Division par zéro n'est pas autorisée");
         } else {
+
             const EmbedEval = new Discord.EmbedBuilder()
-                .setTitle(`*** CALCULATE WITH SYMBOL ${symbole} ***`)
+                .setTitle(`🧮-  Le bot est entrain de calculer ${nombre} ${symbole} ${nombre1}`)
+                .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
                 .setColor("#00A705")
-                .setDescription(`> 💻  ${nombre} ${symbole} ${nombre1} = ${result}`)
-                .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 64 }))
-                .setTimestamp()
-                .setFooter({ text: `${interaction.user.tag}`, iconURL: `${interaction.user.avatarURL()}` })
+                .setDescription(`
+\`\`\`asciidoc
+• Résultat :: ${result}
+\`\`\`
+                            `)
+                .setFooter({ text: `Commande utilisée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+                .setTimestamp();
 
             interaction.reply({ embeds: [EmbedEval] });
         }

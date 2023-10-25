@@ -20,20 +20,21 @@ module.exports = {
     run: (bot, interaction, args) => {
 
         const utilisateur = args.getUser(`membre`);
+        const avatarUtilisateur = utilisateur.displayAvatarURL({ dynamic: true, size: 512, format: "png" })
 
         const ligne = new Discord.ActionRowBuilder()
             .addComponents(
                 new Discord.ButtonBuilder()
                     .setLabel("Avatar")
-                    .setURL(utilisateur.displayAvatarURL({ dynamic: true }))
+                    .setURL(avatarUtilisateur)
                     .setStyle(Discord.ButtonStyle.Link)
             );
 
         const embedAvatar = new Discord.EmbedBuilder()
             .setColor("#00A705")
-            .setDescription(`>🎭 **__L'avatar du membre ${utilisateur.tag}__**`)
-            .setImage(utilisateur.displayAvatarURL({ dynamic: true }))
-            .setFooter({ text: `${interaction.user.tag}`, iconURL: `${interaction.user.avatarURL()}` });
+            .setImage(avatarUtilisateur)
+            .setFooter({ text: `Commande utilisée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+            .setTimestamp();
 
         interaction.reply({ embeds: [embedAvatar], components: [ligne] });
     }

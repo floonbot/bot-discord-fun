@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { générerNombreAléatoire } = require("../../Fonctions/math")
+const { generateRandomNumber } = require("../../Fonctions/math")
 
 module.exports = {
     name: "nombre-aléatoire",
@@ -8,16 +8,21 @@ module.exports = {
     dm: false,
     category: "🥳 .Fun",
 
-  async  run (bot, interaction)  {
-        const nombreAléatoire = générerNombreAléatoire();
+    async run(bot, interaction) {
+
+        const nombreAléatoire = generateRandomNumber();
 
         const embedAléatoire = new Discord.EmbedBuilder()
-            .setTitle(`***VOUS AVEZ OBTENU LE NUMÉRO***`)
+            .setTitle(`-🎲 Le bot est entrain de choisir le nombre`)
+            .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
             .setColor("#00A705")
-            .setDescription(`> 🍀 Vous avez obtenu le numéro : \`${nombreAléatoire}\``)
-            .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 64 }))
-            .setTimestamp()
-            .setFooter({ text: `${interaction.user.tag}`, iconURL: `${interaction.user.avatarURL()}` })
+            .setDescription(`
+\`\`\`asciidoc
+• Obetnue :: ${nombreAléatoire}
+\`\`\`
+                            `)
+            .setFooter({ text: `Commande lancé par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
+            .setTimestamp();
 
         interaction.reply({ embeds: [embedAléatoire] });
     }
