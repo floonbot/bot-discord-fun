@@ -1,45 +1,28 @@
 const Discord = require("discord.js");
 
 module.exports = async (bot, interaction) => {
+  if (interaction.type === Discord.InteractionType.ApplicationCommandAutocomplete) {
+    const autocompleteOptions = {
+      calculatrice: ["+", "-", "*", "/", "%"],
+      traduction: {
+        langue: ['fr', 'en', 'ja'],
+      },
+      'pierre-feuille-ciseaux': ["pierre", "papier", "ciseaux"],
+    };
 
-    if (interaction.type === Discord.InteractionType.ApplicationCommandAutocomplete) {
-        let entry = interaction.options.getFocused()
-        if (interaction.commandName === "calculatrice") {
-            let choices = ["+", "-", "*", "/", "%"]
-            let sortie = choices.filter(c => c.includes(entry))
-            await interaction.respond(entry === "" ? sortie.map(c => ({ name: c, value: c })) : sortie.map(c => ({ name: c, value: c })))
-        }
-        if (interaction.commandName === "traduction") {
-            let choices;
-            const focusedOption = interaction.options.getFocused(true);
-            if (focusedOption.name === 'langue') {
-                choices = ['fr', 'en', 'ja']
-            }
-            let sortie = choices.filter(c => c.includes(entry))
-            await interaction.respond(entry === "" ? sortie.map(c => ({ name: c, value: c })) : sortie.map(c => ({ name: c, value: c })))
-        }
-        if (interaction.commandName === "pierre-feuille-ciseaux") {
-            let choices = ["pierre", "papier", "ciseaux"]
-            let sortie = choices.filter(c => c.includes(entry))
-            await interaction.respond(entry === "" ? sortie.map(c => ({ name: c, value: c })) : sortie.map(c => ({ name: c, value: c })))
-        }
+    const commandName = interaction.commandName;
+    const entry = interaction.options.getFocused();
+    const choices = autocompleteOptions[commandName];
+    
+    if (choices) {
+      const filteredChoices = choices.filter(c => c.includes(entry));
+      const options = filteredChoices.map(c => ({ name: c, value: c }));
+      await interaction.respond(options);
     }
-    if (interaction.type === Discord.InteractionType.ApplicationCommand) {
-        const command = interaction.client.commands.get(interaction.commandName);
-        command?.run?.(bot, interaction, interaction.options)
-    }
-}
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  if (interaction.type === Discord.InteractionType.ApplicationCommand) {
+    const command = interaction.client.commands.get(interaction.commandName);
+    command?.run?.(bot, interaction, interaction.options);
+  }
+};
