@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 const réponse = ["Oui", "Non", "Peut-être"]
 
 module.exports = {
@@ -6,6 +6,7 @@ module.exports = {
 	name: "8ball",
 	description: "Permet de poser une question",
 	permission: "Aucune",
+	ownerOnly: false,
 	dm: false,
 	category: "🥳 .Fun",
 	options: [
@@ -24,9 +25,9 @@ module.exports = {
 
 		const result = réponse[Math.floor(Math.random() * réponse.length)];
 
-		const Embedball = new Discord.EmbedBuilder()
+		const Embedball = new EmbedBuilder()
 			.setTitle("-✅  Le bot a répondu à ta question")
-			.setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png"}))
+			.setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
 			.setColor("#00A705")
 			.setDescription(`
 \`\`\`asciidoc

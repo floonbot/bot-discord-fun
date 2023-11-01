@@ -1,10 +1,11 @@
-const Discord = require("discord.js");
+const { EmbedBuilder } = require('discord.js');
 const { calculate } = require("../../Fonctions/math")
 
 module.exports = {
     name: "calculatrice",
     description: "Permet de calculer",
     permission: "Aucune",
+    ownerOnly: false,
     dm: false,
     category: "🥳 .Fun",
     options: [
@@ -44,7 +45,7 @@ module.exports = {
             interaction.reply("Division par zéro n'est pas autorisée");
         } else {
 
-            const EmbedEval = new Discord.EmbedBuilder()
+            const EmbedEval = new EmbedBuilder()
                 .setTitle(`🧮-  Le bot est entrain de calculer ${nombre} ${symbole} ${nombre1}`)
                 .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
                 .setColor("#00A705")

@@ -1,4 +1,4 @@
-const discord = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 const moment = require("moment");
 require("moment-duration-format");
 const ms = require("ms");
@@ -10,13 +10,14 @@ module.exports = {
     name: "statistique",
     description: "Afficher les statistiques du système",
     permission: "Aucune",
+    ownerOnly: false,
     dm: false,
     category: "🥳 .Fun",
     run: async (bot, interaction, args) => {
 
         const durée = moment.duration(bot.uptime).format("**D [D], H [H], m [M], s [S]**");
 
-        const embed = new discord.EmbedBuilder()
+        const embed = new EmbedBuilder()
             .setTitle(`-💻  Statistiques du Système`)
             .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
             .setColor("#00A705")

@@ -1,0 +1,25 @@
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\Floon\\Desktop\\bot discord Fun\\Commandes\\Fun\\snake.js","C:\\Users\\Floon\\Desktop\\bot discord Fun\\Loaders\\loadCommands.js","C:\\Users\\Floon\\Desktop\\bot discord Fun\\main.js"]},"timestamp":"2023-10-26T18:20:15.184Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-10-26T19:18:54.920Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionAlreadyReplied"},"timestamp":"2023-10-26T19:19:30.316Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionAlreadyReplied"},"timestamp":"2023-10-26T19:20:12.671Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-10-26T19:20:46.206Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-10-26T19:20:51.443Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-10-26T19:21:18.258Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-10-26T19:21:39.747Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionAlreadyReplied"},"timestamp":"2023-10-26T19:22:24.031Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionAlreadyReplied"},"timestamp":"2023-10-26T19:22:46.001Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionAlreadyReplied"},"timestamp":"2023-10-26T19:23:24.315Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionAlreadyReplied"},"timestamp":"2023-10-26T19:24:11.903Z"}
+{"error":{},"level":"error","message":"Uncaught exception","origin":"uncaughtException","timestamp":"2023-10-31T21:18:41.932Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"TokenInvalid"},"timestamp":"2023-10-31T21:18:42.322Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"TokenInvalid"},"timestamp":"2023-11-01T01:54:56.881Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-11-01T01:56:49.427Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-11-01T02:06:31.790Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\Floon\\Desktop\\bot discord Fun\\Events\\interactionCreate.js","C:\\Users\\Floon\\Desktop\\bot discord Fun\\Loaders\\loadEvents.js","C:\\Users\\Floon\\Desktop\\bot discord Fun\\main.js"]},"timestamp":"2023-11-01T02:31:13.962Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionNotReplied"},"timestamp":"2023-11-01T02:40:47.121Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"InteractionNotReplied"},"timestamp":"2023-11-01T02:42:54.933Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"ENOENT","errno":-4058,"path":"C:\\Users\\Floon\\Desktop\\bot discord Fun\\Commandes","syscall":"scandir"},"timestamp":"2023-11-01T02:49:31.710Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{"code":"ENOENT","errno":-4058,"path":"C:\\Users\\Floon\\Desktop\\bot discord Fun\\Events","syscall":"scandir"},"timestamp":"2023-11-01T02:49:31.715Z"}
+{"error":{},"level":"error","message":"Uncaught exception","origin":"uncaughtException","timestamp":"2023-11-01T13:13:58.659Z"}
+{"level":"error","message":"Unhandled Rejection","promise":{},"reason":{},"timestamp":"2023-11-01T13:15:59.846Z"}
+{"error":{},"level":"error","message":"Uncaught exception","origin":"uncaughtException","timestamp":"2023-11-01T13:16:23.318Z"}

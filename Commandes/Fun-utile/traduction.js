@@ -1,11 +1,12 @@
 const translate = require('@iamtraction/google-translate');
-const Discord = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
 
     name: "traduction",
     description: "Permet de traduire du texte",
     permission: "Aucune",
+    ownerOnly: false,
     dm: false,
     category: "🥳 .Fun",
     options: [
@@ -35,7 +36,7 @@ module.exports = {
 
         if (!languesDisponibles.includes(langue)) {
 
-            const erreur = new Discord.EmbedBuilder()
+            const erreur = new EmbedBuilder()
                 .setTitle(`-👅  Le bot ne prend pas en charge se language`)
                 .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
                 .setColor("#000000")
@@ -46,7 +47,7 @@ module.exports = {
                             `)
                 .setFooter({ text: `Traduction lancé par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })
                 .setTimestamp();
-           return interaction.reply({ embeds: [erreur] })
+            return interaction.reply({ embeds: [erreur] })
         }
 
         const traduit = await translate(texte, { to: langue });

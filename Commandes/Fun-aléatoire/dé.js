@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 const { rollDice } = require('../../Fonctions/math')
 
 module.exports = {
@@ -6,14 +6,16 @@ module.exports = {
     name: "dé",
     description: "Permet au bot de choisir un nombre entre 1 et 6",
     permission: "Aucune",
-    category: "🥳 .Fun",
+    ownerOnly: false,
     dm: false,
+    category: "🥳 .Fun",
+    options: [],
 
     async run(bot, interaction) {
 
         const random = rollDice();
 
-        const EmbedDe = new Discord.EmbedBuilder()
+        const EmbedDe = new EmbedBuilder()
             .setTitle(`-🎲 Le bot est entrain de lancé le dé`)
             .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))
             .setColor("#00A705")

@@ -5,6 +5,7 @@ module.exports = {
     name: "art-texte",
     description: "Permet de créer de l'art texte",
     permission: "Aucune",
+    ownerOnly: false,
     dm: false,
     category: "🥳 .Fun",
     options: [

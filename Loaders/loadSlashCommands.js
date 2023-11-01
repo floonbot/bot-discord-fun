@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const {SlashCommandBuilder} = require('discord.js');
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord.js");
 
@@ -8,7 +8,7 @@ module.exports = async bot => {
 
   bot.commands.forEach(async command => {
 
-    let slashcommand = new Discord.SlashCommandBuilder()
+    let slashcommand = new SlashCommandBuilder()
       .setName(command.name)
       .setDescription(command.description)
       .setDMPermission(command.dm)

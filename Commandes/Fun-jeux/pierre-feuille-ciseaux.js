@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { EmbedBuilder } = require('discord.js');
 const { getChoiceBot, determineResult } = require('../../Fonctions/pfc')
 
 module.exports = {
@@ -6,6 +6,7 @@ module.exports = {
     name: 'pierre-feuille-ciseaux',
     description: 'Joue à pierre-papier-ciseaux',
     permission: "Aucune",
+    ownerOnly: false,
     dm: false,
     category: "🥳 .Fun",
     options: [
@@ -24,7 +25,7 @@ module.exports = {
         const botChoice = getChoiceBot();
         const result = determineResult(userChoice, botChoice);
 
-        const EmbedPFC = new Discord.EmbedBuilder()
+        const EmbedPFC = new EmbedBuilder()
             .setTitle(`-🪨 Le bot est entrain de chosir son coup à jouer`)
             .setColor("#00A705")
             .setThumbnail(bot.user.displayAvatarURL({ dynamic: true, size: 256, format: "png" }))

@@ -3,6 +3,7 @@ module.exports = {
     name: 'emojify',
     description: "Permet de transformer le texte en emoji",
     permission: "Aucune",
+    ownerOnly: false,
     dm: false,
     category: "🥳 .Fun",
     options: [

@@ -1,7 +1,7 @@
-const fs = require("fs").promises;
+const { readdir } = require("fs").promises;
 
 module.exports = async (bot) => {
-  const files = await fs.readdir("./Events");
+  const files = await readdir("./Events");
   const eventFiles = files.filter(file => file.endsWith(".js"));
 
   const bindEvents = eventFiles.map(async file => {

@@ -10,9 +10,11 @@ Avec se code tu pourras utilisée des slash commande qui sont principalement fun
 - dotenv: ^16.3.1
 - colorette: ^2.0.20
 - pretty-error: ^4.0.0
-- moment": "^2.29.4"
-- ms": "^2.1.3"
-- moment-duration-format": "^2.3.2"
+- moment: ^2.29.4
+- ms: ^2.1.3
+- moment-duration-format: ^2.3.2
+- fs: ^0.0.1-security
+- winston: ^3.11.0
 
 ## Installation
 
