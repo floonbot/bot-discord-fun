@@ -3,7 +3,7 @@ const { StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder
 module.exports = {
 
     name: "testselectr",
-    description: "Vous permet de récupérer l'avatar d'un membre",
+    description: "Vous permet de crée un select-menu",
     permission: "Aucune",
     ownerOnly: true,
     dm: false,

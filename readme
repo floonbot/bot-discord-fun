@@ -15,6 +15,8 @@ Avec se code tu pourras utilisée des slash commande qui sont principalement fun
 - moment-duration-format: ^2.3.2
 - fs: ^0.0.1-security
 - winston: ^3.11.0
+- mal-scraper: ^2.13.1
+- pm2 -g: 
 
 ## Installation
 
@@ -31,21 +33,21 @@ Avec se code tu pourras utilisée des slash commande qui sont principalement fun
 3. Créez un fichier `.env` à la racine de votre projet et ajoutez vos variables d'environnement (par exemple, votre jeton Discord) :
 
     exemple TOKEN = le token du bot
+    exemple ownerId = le ownerId du proprietaire
 
 
 4. Démarrez le bot :
  
 
-    node main.js
+   pm2 start main.js --name "Bot Discord Fun"
+   pm2 reload main.js
+   pm2 stop main.js
+   pm2 delete "Bot Discord Fun"
 
 
 ## Utilisation
 
 Dans le tchat discord pu se trouve votre bot taper par exemple /avatar qui affichera l'avatar d'un membre du clan ou le votre 
-
-## Commandes
-
-/8ball, /art-texte, /avatar-random, /calculatrice, /dé, /emojify, /nombre-aléatoire, /pierre-feuille-ciseaux, /traducction, /statistique
 
 ## Contact
 

@@ -18,7 +18,7 @@ module.exports = {
         }
     ],
 
-    run: (bot, interaction, args) => {
+    async run(bot, interaction, args) {
 
         const utilisateur = args.getUser(`membre`);
         const avatarUtilisateur = utilisateur.displayAvatarURL({ dynamic: true, size: 512, format: "png" })

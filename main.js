@@ -1,4 +1,4 @@
-const { Client, IntentsBitField, Collection } = require("discord.js");
+const { Client, IntentsBitField, Collection } = require("discord.js"); 
 const intents = new IntentsBitField(3276799);
 const bot = new Client({ intents });
 const loadCommands = require("./Loaders/loadCommands");

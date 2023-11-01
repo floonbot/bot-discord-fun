@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
-const réponse = ["Oui", "Non", "Peut-être"]
+const réponse = ["Oui", "Non", "Peut-être"];
 
 module.exports = {
 

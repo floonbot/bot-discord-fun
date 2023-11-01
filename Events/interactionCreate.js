@@ -4,7 +4,6 @@ const buttonHandler = require('../Handler/buttonHandler');
 const autocompleteHandler = require('../Handler/autocompleteHandler');
 const selectMenuHandler = require('../Handler/selectMenuHandler');
 
-
 module.exports = async (bot, interaction) => {
 
   if (interaction.isButton()) {

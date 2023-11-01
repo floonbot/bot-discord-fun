@@ -10,10 +10,12 @@ module.exports = {
     name: "statistique",
     description: "Afficher les statistiques du système",
     permission: "Aucune",
-    ownerOnly: false,
+    ownerOnly: true,
     dm: false,
-    category: "🥳 .Fun",
-    run: async (bot, interaction, args) => {
+    category: 'owner',
+    options: [],
+
+    async run(bot, interaction, args) {
 
         const durée = moment.duration(bot.uptime).format("**D [D], H [H], m [M], s [S]**");
 

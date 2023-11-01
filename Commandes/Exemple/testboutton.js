@@ -2,7 +2,7 @@ const { ButtonBuilder, ButtonStyle, ActionRowBuilder} = require('discord.js');
 
 module.exports = {
 
-    name: "ping",
+    name: "testboutton",
     description: "Permet de répondre pong",
     permission: "Aucune",
     ownerOnly: true,
