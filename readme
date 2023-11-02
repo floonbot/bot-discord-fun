@@ -27,7 +27,7 @@ Avec se code tu pourras utilisée des slash commande qui sont principalement fun
 2. Installez les dépendances :
 
     exemple npm i discord.js@v14.13.0
-    attention a bien mettre las bonne version
+    attention a bien mettre les bonnes version
 
 
 3. Créez un fichier `.env` à la racine de votre projet et ajoutez vos variables d'environnement (par exemple, votre jeton Discord) :

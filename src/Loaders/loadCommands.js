@@ -23,5 +23,6 @@ module.exports = async (bot) => {
     }
   }
 
-  await scanDir(join(process.cwd(), 'Commandes'));
+  await scanDir(join(process.cwd(), 'src', 'Commandes'));
+
 }

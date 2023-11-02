@@ -7,7 +7,7 @@ module.exports = {
     permission: "Aucune",
     ownerOnly: false,
     dm: false,
-    category: "🥳 .Amusement",
+    category: ".Fun",
     options: [
         {
             type: "user",

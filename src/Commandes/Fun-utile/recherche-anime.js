@@ -4,11 +4,11 @@ const { getInfoFromName } = require('mal-scraper');
 module.exports = {
 
     name: "recherche-anime",
-    description: "Permet de consulter des informations sur un anime",
+    description: "Information sur l'animer",
     permission: "Aucune",
     ownerOnly: false,
     dm: false,
-    category: "🥳 .Fun",
+    category: ".Util",
     options: [
         {
             type: "string",
@@ -36,7 +36,6 @@ module.exports = {
 • Nombre d'épisodes          :: ${episodes}
 • Durée moyenne des épisodes :: ${duration}
 • Score                      :: ${score}
-• URL                        :: ${url}
 \`\`\`
 `)
             .setFooter({ text: `Commande utilisée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })

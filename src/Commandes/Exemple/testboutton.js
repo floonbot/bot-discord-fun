@@ -7,7 +7,7 @@ module.exports = {
     permission: "Aucune",
     ownerOnly: true,
     dm: false,
-    category: "🥳 .Fun",
+    category: ".Exemple",
     options: [],
 
     async run(bot, interaction, args) {

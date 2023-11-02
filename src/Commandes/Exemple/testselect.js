@@ -2,12 +2,12 @@ const { StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder
 
 module.exports = {
 
-    name: "testselectr",
-    description: "Vous permet de crée un select-menu",
+    name: "testselect",
+    description: "Exemple pour le select-menu",
     permission: "Aucune",
     ownerOnly: true,
     dm: false,
-    category: "🥳 .Amusement",
+    category: ".Exemple",
     options: [],
 
     async run(bot, interaction, args) {
