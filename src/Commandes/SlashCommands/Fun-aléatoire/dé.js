@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const { rollDice } = require('../../Fonctions/math')
+const { rollDice } = require('../../../Fonctions/math');
 
 module.exports = {
 
@@ -29,4 +29,5 @@ module.exports = {
 
         interaction.reply({ embeds: [EmbedDe] });
     }
-}
+};
+

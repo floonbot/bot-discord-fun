@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const { getChoiceBot, determineResult } = require('../../Fonctions/pfc')
+const { getChoiceBot, determineResult } = require('../../../Fonctions/pfc')
 
 module.exports = {
 

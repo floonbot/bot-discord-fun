@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const { calculate } = require("../../Fonctions/math")
+const { calculate } = require("../../../Fonctions/math")
 
 module.exports = {
     name: "calculatrice",

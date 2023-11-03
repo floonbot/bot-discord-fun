@@ -1,4 +1,4 @@
-const { ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   handleButtonInteraction: async (bot, interaction) => {

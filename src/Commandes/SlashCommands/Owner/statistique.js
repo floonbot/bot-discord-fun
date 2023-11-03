@@ -1,9 +1,9 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder, version } = require('discord.js');
 const moment = require("moment");
 require("moment-duration-format");
 const ms = require("ms");
 const os = require("node:os");
-const { formatBytes } = require("../../Fonctions/formatBytes")
+const { formatBytes } = require("../../../Fonctions/formatBytes")
 
 module.exports = {
 
@@ -31,7 +31,7 @@ module.exports = {
 • Temps du processus        :: ${ms(Math.round(process.uptime() * 1000), { long: true })}
 • Temps du système          :: ${ms(os.uptime() ?? 0, { long: true })}
 • Version de Node.js        :: ${process.version}
-• Version de Discord.js     :: v${discord.version}
+• Version de Discord.js     :: v${version}
 \`\`\`
             `)
             .setFooter({ text: `Commande utilisée par ${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({ dynamic: true, size: 128, format: "png" })}` })

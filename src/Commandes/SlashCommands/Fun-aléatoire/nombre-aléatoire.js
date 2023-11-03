@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const { generateRandomNumber } = require("../../Fonctions/math")
+const { generateRandomNumber } = require("../../../Fonctions/math")
 
 module.exports = {
     name: "nombre-aléatoire",
