@@ -6,4 +6,6 @@ module.exports = async (bot) => {
   process.on("SIGINT", async () => {
     process.exit(0);
   });
+
+  console.log(`Le bot ${bot.user.tag} est en ligne`)
 };

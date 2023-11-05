@@ -1,4 +1,4 @@
-const { ButtonBuilder, ButtonStyle, ActionRowBuilder} = require('discord.js');
+const { ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js');
 
 module.exports = {
 
@@ -10,18 +10,18 @@ module.exports = {
     category: ".Exemple",
     options: [],
 
-    async run(bot, interaction, args) {
+    run(bot, interaction, args) {
 
         const pingButton = new ButtonBuilder()
             .setCustomId('ping_button')
             .setLabel('Cliquez pour Pong!')
             .setStyle(ButtonStyle.Primary);
-            
+
         const actionRow = new ActionRowBuilder().addComponents(pingButton);
 
-        await interaction.reply({
+        interaction.reply({
             content: 'Cliquez sur le bouton pour Pong!',
-            components: [actionRow], 
+            components: [actionRow],
         });
     }
 };
